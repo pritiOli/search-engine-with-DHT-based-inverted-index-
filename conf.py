@@ -1,0 +1,9 @@
+N_BITS 				= 3
+
+HEADERLIMIT = 10
+
+SLEEP_FOR 			= 1
+
+LIMIT 	=  2**N_BITS
+
+
