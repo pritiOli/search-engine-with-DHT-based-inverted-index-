@@ -66,7 +66,7 @@ class RemoteChordNode(object):
 		return RemoteChordNode(addr)
 
 	@socket_connection
-	def successor(self): # this is not findSuccessor
+	def successor(self):
 		self.send('successor')
 		response = self.recv()
 		response = json.loads(self.recv())
@@ -75,7 +75,7 @@ class RemoteChordNode(object):
 
 
 	@socket_connection
-	def predecessor(self): # this is not findPredecessor
+	def predecessor(self):
 		self.send('getPredecessor')
 		response = self.recv()
 		response = json.loads(response)
@@ -96,7 +96,7 @@ class RemoteChordNode(object):
 		self.send('notify %s %s' % (node._address.ip, node._address.port))
 
 	@socket_connection
-	def loop_up_key(self,key):
+	def lookUpKey(self,key):
 		self.send('finalLookUpKey %s' % key)
 		response = self.recv()
 		return response

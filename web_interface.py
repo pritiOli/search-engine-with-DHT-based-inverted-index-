@@ -46,8 +46,8 @@ class Node(object):
 
 
     @socket_connection
-    def loop_up_key(self, key):
-        self.send('loop_up_key ' + key)
+    def lookUpKey(self, key):
+        self.send('lookUpKey ' + key)
         return self.recv()
 
     @socket_connection
@@ -64,12 +64,12 @@ class Node(object):
             self.insertKeyVal(key, value)
 
 
-    def lookUpFn(self,key):
-        returnvalue = self.loop_up_key(key)
+    def look_up(self,key):
+        returnvalue = self.lookUpKey(key)
         if returnvalue == '-1':
             print("Key :", key, " not found !!")
         else:
-            # print("Key : ", key, " :: Value : ", returnvalue)
+            print("Key : ", key, " :: Value : ", returnvalue)
             return returnvalue
 
 app = Flask(__name__)
@@ -88,7 +88,7 @@ def search():
     preproceed_query=preprocessor.preprocess(query)
     print(' query ==> '+preproceed_query)
     top_result = []
-    lookup=eval(queryNode.lookUpFn(query))
+    lookup=eval(queryNode.lookUpKey(query))
     tokens = preproceed_query.split()
     if(tokens!='' and lookup!=[]):
         for token in tokens:

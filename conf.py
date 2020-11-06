@@ -1,4 +1,4 @@
-N_BITS 				= 3
+N_BITS 				= 5
 
 HEADERLIMIT = 10
 
