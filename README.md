@@ -2,10 +2,27 @@
 search engine with DHT based inverted index
 
 search engine with DHT based inverted index is a search engine based BBC news article crawled for the year 2020. the DHT 
-is implemented with CHORD archietecture. 
+is implemented with CHORD archietecture. This project is implemented as a part of project for Distributed System. 
+
 
 ### requirement
-python 3
+- python 3
+- flask 
+
+### python built-in modules used
+- pickle
+- json
+- socket
+- threading
+- sys
+- hashlib
+- re
+- os
+- math
+
+
+##### install flask for python 
+> pip install flask
 
 ### run single node instance:
 python chordImpl.py node_port_number 
