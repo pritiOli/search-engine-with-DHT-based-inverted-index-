@@ -4,7 +4,7 @@ search engine with DHT based inverted index
 search engine with DHT based inverted index is a search engine based BBC news article crawled for the year 2020. the DHT 
 is implemented with CHORD archietecture. 
 
-## requirements
+### requirement
 python 3
 
 ### run single node instance:
