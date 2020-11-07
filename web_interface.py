@@ -107,5 +107,6 @@ if __name__ == "__main__":
         queryNode.load_dict("index.pickle")
     else:
         print("Insufficient argumrnts")
+        exit(1)
 
     app.run(host='127.0.0.1', port=8000)
